@@ -40,8 +40,8 @@ the host is correct.
 
 The `RouterMatch` object contains information about the match including the any
 matches in the path. The subscript accessor will get any path matchers, or query
-params included. For the url `https://www.mysite.com/search/foo?bar=baz` you could
-call:
+params included. For the url `https://www.mysite.com/search/foo?bar=baz` you
+could call:
 ```swift
 routerMatch["term"] //=> Optional("foo")
 routerMatch["bar"]  //=> Optional("baz")
@@ -53,6 +53,20 @@ To actually do the routing you build a `RouteSet` object that contains a list of
 routes.
 
 ```swift
+struct SearchRoute: PathRouteable, HostRouteable {
+    static let path = "/search/:term"
+    static let host = "*.mysite.com"
+    let term: String?
+
+    init(routerMatch:RouterMatch) {
+        term = routerMatch["term"]
+    }
+
+    var viewController: UIViewController {
+      return SearchViewController(term: term)
+    }
+}
+
 let router = RouteSet(routes:[
   SearchRoute.self,
   BaseRoute.self,
@@ -63,8 +77,13 @@ let route = router.match(url: NSURL(string: "https://www.mysite.com/search/surge
 
 if let searchRoute = route as? SearchRoute {
   print("term: \(searchRoute.term)") //=> term: surge+soda
+  self.navigationController.pushViewController(searchRoute.viewController, animated: true)
 }
 ```
+
+This allows you to make a generically useable routes. For instance making a
+protocol which enforces the return of a view controller that's blindly pushed
+onto the stack when matched.
 
 ## TODO
 
