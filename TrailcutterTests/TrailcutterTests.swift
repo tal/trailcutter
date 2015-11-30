@@ -9,25 +9,25 @@
 import XCTest
 @testable import Trailcutter
 
-let routes: [Routeable.Type] = [
+private let routes: [Routeable.Type] = [
     SearchRoute.self,
     NoMatch.self,
 ]
 
-let failure: Routeable? -> Bool = { (result) -> Bool in
+private let failure: Routeable? -> Bool = { (result) -> Bool in
     var success = true
     
-    if let _ = result {
+    if result != nil {
         success = false
     }
     
     return success
 }
 
-let isSearchRoute: Routeable? -> Bool = { (result) -> Bool in
+private let isSearchRoute: Routeable? -> Bool = { (result) -> Bool in
     var success = false
     
-    if let _ = result as? SearchRoute {
+    if result is SearchRoute {
         success = true
     }
     
