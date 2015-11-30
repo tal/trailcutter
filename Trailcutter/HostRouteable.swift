@@ -27,7 +27,7 @@ func matchHostRouteable(Route: Routeable.Type)(_ match: RouterMatch?) -> RouterM
     
     if let HostRoute = Route as? HostRouteable.Type {
         
-        guard let urlHost = match.URL.host else { return nil }
+        guard let urlHost = match.url.host else { return nil }
         
         if isSuffix(HostRoute.host) {
             if hostMatchesSuffix(HostRoute.host, host: urlHost) {

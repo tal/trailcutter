@@ -16,7 +16,7 @@ func matchPathRouteable(Route: Routeable.Type)(_ match: RouterMatch?) -> RouterM
     guard var match = match else { return nil }
     
     if let PathRoute = Route as? PathRouteable.Type {
-        if let path = match.URL.path {
+        if let path = match.url.path {
             match.pathMatch = matchRouteToString(route: PathRoute.path, path: path)
         }
         

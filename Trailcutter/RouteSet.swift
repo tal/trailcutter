@@ -38,7 +38,7 @@ public struct RouteSet {
         var routeInstance:Routeable? = nil
         
         for Route in routes {
-            let match = RouterMatch(URL: url, pathMatch: nil, wasMatched: false)
+            let match = RouterMatch(url: url, pathMatch: nil, wasMatched: false)
             
             if let successfulMatch = matchRoute(Route, match: match) {
                 routeInstance = Route.init(routerMatch: successfulMatch)

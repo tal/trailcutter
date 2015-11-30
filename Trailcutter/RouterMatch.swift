@@ -9,7 +9,7 @@
 import Foundation
 
 public struct RouterMatch {
-    let URL: NSURL
+    let url: NSURL
     var pathMatch:[String: String]? = nil
     var wasMatched = false
     
@@ -18,7 +18,7 @@ public struct RouterMatch {
             return val
         }
         
-        if let val = URL.queryDict?[key] {
+        if let val = url.queryDict?[key] {
             return val
         }
         
