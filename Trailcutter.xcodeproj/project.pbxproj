@@ -10,6 +10,18 @@
 		3F44C7BE1BF58BAD003A45C1 /* Trailcutter.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F44C7BD1BF58BAD003A45C1 /* Trailcutter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3F44C7C51BF58BAD003A45C1 /* Trailcutter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F44C7BA1BF58BAD003A45C1 /* Trailcutter.framework */; };
 		3F44C7CA1BF58BAD003A45C1 /* TrailcutterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44C7C91BF58BAD003A45C1 /* TrailcutterTests.swift */; };
+		3F854E691C0BA7ED00AB5454 /* TestRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F854E681C0BA7ED00AB5454 /* TestRoutes.swift */; };
+		3F9EEB6D1C0BE13600C4FBB4 /* RouteTestExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9EEB6C1C0BE13600C4FBB4 /* RouteTestExample.swift */; };
+		3FF2BF641C091FEB0066C8E8 /* RouterMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF2BF631C091FEB0066C8E8 /* RouterMatch.swift */; };
+		3FF2BF661C0920260066C8E8 /* NSURL-ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF2BF651C0920260066C8E8 /* NSURL-ext.swift */; };
+		3FF2BF681C0920340066C8E8 /* Array-ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF2BF671C0920340066C8E8 /* Array-ext.swift */; };
+		3FF2BF6A1C0920BF0066C8E8 /* String-ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF2BF691C0920BF0066C8E8 /* String-ext.swift */; };
+		3FF2BF6C1C0920DF0066C8E8 /* Routeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF2BF6B1C0920DF0066C8E8 /* Routeable.swift */; };
+		3FF2BF6F1C09210E0066C8E8 /* PathRouteable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF2BF6E1C09210E0066C8E8 /* PathRouteable.swift */; };
+		3FF2BF711C09216A0066C8E8 /* matching-funcs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF2BF701C09216A0066C8E8 /* matching-funcs.swift */; };
+		3FF2BF731C09251C0066C8E8 /* HostRouteable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF2BF721C09251C0066C8E8 /* HostRouteable.swift */; };
+		3FF2BF751C0925590066C8E8 /* ensure-matching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF2BF741C0925590066C8E8 /* ensure-matching.swift */; };
+		3FF2BF771C0927930066C8E8 /* RouteSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF2BF761C0927930066C8E8 /* RouteSet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +41,18 @@
 		3F44C7C41BF58BAD003A45C1 /* TrailcutterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrailcutterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F44C7C91BF58BAD003A45C1 /* TrailcutterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailcutterTests.swift; sourceTree = "<group>"; };
 		3F44C7CB1BF58BAD003A45C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F854E681C0BA7ED00AB5454 /* TestRoutes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestRoutes.swift; sourceTree = "<group>"; };
+		3F9EEB6C1C0BE13600C4FBB4 /* RouteTestExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteTestExample.swift; sourceTree = "<group>"; };
+		3FF2BF631C091FEB0066C8E8 /* RouterMatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterMatch.swift; sourceTree = "<group>"; };
+		3FF2BF651C0920260066C8E8 /* NSURL-ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURL-ext.swift"; sourceTree = "<group>"; };
+		3FF2BF671C0920340066C8E8 /* Array-ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array-ext.swift"; sourceTree = "<group>"; };
+		3FF2BF691C0920BF0066C8E8 /* String-ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String-ext.swift"; sourceTree = "<group>"; };
+		3FF2BF6B1C0920DF0066C8E8 /* Routeable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routeable.swift; sourceTree = "<group>"; };
+		3FF2BF6E1C09210E0066C8E8 /* PathRouteable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathRouteable.swift; sourceTree = "<group>"; };
+		3FF2BF701C09216A0066C8E8 /* matching-funcs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "matching-funcs.swift"; sourceTree = "<group>"; };
+		3FF2BF721C09251C0066C8E8 /* HostRouteable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostRouteable.swift; sourceTree = "<group>"; };
+		3FF2BF741C0925590066C8E8 /* ensure-matching.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ensure-matching.swift"; sourceTree = "<group>"; };
+		3FF2BF761C0927930066C8E8 /* RouteSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteSet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +95,13 @@
 		3F44C7BC1BF58BAD003A45C1 /* Trailcutter */ = {
 			isa = PBXGroup;
 			children = (
+				3FF2BF781C092B060066C8E8 /* Extensions */,
 				3F44C7BD1BF58BAD003A45C1 /* Trailcutter.h */,
+				3FF2BF6B1C0920DF0066C8E8 /* Routeable.swift */,
+				3FF2BF6D1C0920F80066C8E8 /* Routeables */,
+				3FF2BF631C091FEB0066C8E8 /* RouterMatch.swift */,
+				3FF2BF761C0927930066C8E8 /* RouteSet.swift */,
+				3FF2BF701C09216A0066C8E8 /* matching-funcs.swift */,
 				3F44C7BF1BF58BAD003A45C1 /* Info.plist */,
 			);
 			path = Trailcutter;
@@ -82,8 +112,30 @@
 			children = (
 				3F44C7C91BF58BAD003A45C1 /* TrailcutterTests.swift */,
 				3F44C7CB1BF58BAD003A45C1 /* Info.plist */,
+				3F854E681C0BA7ED00AB5454 /* TestRoutes.swift */,
+				3F9EEB6C1C0BE13600C4FBB4 /* RouteTestExample.swift */,
 			);
 			path = TrailcutterTests;
+			sourceTree = "<group>";
+		};
+		3FF2BF6D1C0920F80066C8E8 /* Routeables */ = {
+			isa = PBXGroup;
+			children = (
+				3FF2BF6E1C09210E0066C8E8 /* PathRouteable.swift */,
+				3FF2BF721C09251C0066C8E8 /* HostRouteable.swift */,
+				3FF2BF741C0925590066C8E8 /* ensure-matching.swift */,
+			);
+			name = Routeables;
+			sourceTree = "<group>";
+		};
+		3FF2BF781C092B060066C8E8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3FF2BF691C0920BF0066C8E8 /* String-ext.swift */,
+				3FF2BF651C0920260066C8E8 /* NSURL-ext.swift */,
+				3FF2BF671C0920340066C8E8 /* Array-ext.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +246,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FF2BF6C1C0920DF0066C8E8 /* Routeable.swift in Sources */,
+				3FF2BF711C09216A0066C8E8 /* matching-funcs.swift in Sources */,
+				3FF2BF6A1C0920BF0066C8E8 /* String-ext.swift in Sources */,
+				3FF2BF6F1C09210E0066C8E8 /* PathRouteable.swift in Sources */,
+				3FF2BF661C0920260066C8E8 /* NSURL-ext.swift in Sources */,
+				3FF2BF751C0925590066C8E8 /* ensure-matching.swift in Sources */,
+				3FF2BF641C091FEB0066C8E8 /* RouterMatch.swift in Sources */,
+				3FF2BF681C0920340066C8E8 /* Array-ext.swift in Sources */,
+				3FF2BF771C0927930066C8E8 /* RouteSet.swift in Sources */,
+				3FF2BF731C09251C0066C8E8 /* HostRouteable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +264,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F44C7CA1BF58BAD003A45C1 /* TrailcutterTests.swift in Sources */,
+				3F9EEB6D1C0BE13600C4FBB4 /* RouteTestExample.swift in Sources */,
+				3F854E691C0BA7ED00AB5454 /* TestRoutes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +372,7 @@
 		3F44C7CF1BF58BAD003A45C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -318,12 +383,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = by.tal.Trailcutter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		3F44C7D01BF58BAD003A45C1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -376,6 +443,7 @@
 				3F44C7D01BF58BAD003A45C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3F44C7D11BF58BAD003A45C1 /* Build configuration list for PBXNativeTarget "TrailcutterTests" */ = {
 			isa = XCConfigurationList;
@@ -384,6 +452,7 @@
 				3F44C7D31BF58BAD003A45C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
