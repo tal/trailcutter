@@ -10,7 +10,7 @@ import Foundation
 
 public typealias RouteableMatchingFunc = Routeable.Type -> RouterMatch? -> RouterMatch?
 
-private let defaultMatchers = [matchPathRouteable, matchHostRouteable, matchWasMatched]
+private let defaultMatchers = [matchPathRouteable, matchHostRouteable, matchSchemeRouteable, matchWasMatched]
 
 public struct RouteSet {
     private let routes: [Routeable.Type]
@@ -22,7 +22,7 @@ public struct RouteSet {
     }
     
     public init(routes: [Routeable.Type], additionalMatchers: [RouteableMatchingFunc]) {
-        let matchers = defaultMatchers + additionalMatchers
+        let matchers = additionalMatchers + defaultMatchers
         
         self.init(routes: routes, matchers: matchers)
     }
@@ -38,7 +38,7 @@ public struct RouteSet {
         var routeInstance:Routeable? = nil
         
         for Route in routes {
-            let match = RouterMatch(url: url, pathMatch: nil, wasMatched: false)
+            let match = RouterMatch(url: url)
             
             if let successfulMatch = matchRoute(Route, match: match) {
                 routeInstance = Route.init(routerMatch: successfulMatch)

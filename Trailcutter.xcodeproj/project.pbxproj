@@ -10,6 +10,9 @@
 		3F44C7BE1BF58BAD003A45C1 /* Trailcutter.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F44C7BD1BF58BAD003A45C1 /* Trailcutter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3F44C7C51BF58BAD003A45C1 /* Trailcutter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F44C7BA1BF58BAD003A45C1 /* Trailcutter.framework */; };
 		3F44C7CA1BF58BAD003A45C1 /* TrailcutterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44C7C91BF58BAD003A45C1 /* TrailcutterTests.swift */; };
+		3F7E2E881C101C82003824BF /* Dictonary-ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E2E871C101C82003824BF /* Dictonary-ext.swift */; };
+		3F7E2E8A1C102544003824BF /* SchemeRouteable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E2E891C102544003824BF /* SchemeRouteable.swift */; };
+		3F7E2E8C1C1026C2003824BF /* URIRouteable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E2E8B1C1026C2003824BF /* URIRouteable.swift */; };
 		3F854E691C0BA7ED00AB5454 /* TestRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F854E681C0BA7ED00AB5454 /* TestRoutes.swift */; };
 		3F9EEB6D1C0BE13600C4FBB4 /* RouteTestExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9EEB6C1C0BE13600C4FBB4 /* RouteTestExample.swift */; };
 		3FF2BF641C091FEB0066C8E8 /* RouterMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF2BF631C091FEB0066C8E8 /* RouterMatch.swift */; };
@@ -41,6 +44,9 @@
 		3F44C7C41BF58BAD003A45C1 /* TrailcutterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrailcutterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F44C7C91BF58BAD003A45C1 /* TrailcutterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailcutterTests.swift; sourceTree = "<group>"; };
 		3F44C7CB1BF58BAD003A45C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F7E2E871C101C82003824BF /* Dictonary-ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictonary-ext.swift"; sourceTree = "<group>"; };
+		3F7E2E891C102544003824BF /* SchemeRouteable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchemeRouteable.swift; sourceTree = "<group>"; };
+		3F7E2E8B1C1026C2003824BF /* URIRouteable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URIRouteable.swift; sourceTree = "<group>"; };
 		3F854E681C0BA7ED00AB5454 /* TestRoutes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestRoutes.swift; sourceTree = "<group>"; };
 		3F9EEB6C1C0BE13600C4FBB4 /* RouteTestExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteTestExample.swift; sourceTree = "<group>"; };
 		3FF2BF631C091FEB0066C8E8 /* RouterMatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterMatch.swift; sourceTree = "<group>"; };
@@ -123,6 +129,8 @@
 			children = (
 				3FF2BF6E1C09210E0066C8E8 /* PathRouteable.swift */,
 				3FF2BF721C09251C0066C8E8 /* HostRouteable.swift */,
+				3F7E2E891C102544003824BF /* SchemeRouteable.swift */,
+				3F7E2E8B1C1026C2003824BF /* URIRouteable.swift */,
 				3FF2BF741C0925590066C8E8 /* ensure-matching.swift */,
 			);
 			name = Routeables;
@@ -134,6 +142,7 @@
 				3FF2BF691C0920BF0066C8E8 /* String-ext.swift */,
 				3FF2BF651C0920260066C8E8 /* NSURL-ext.swift */,
 				3FF2BF671C0920340066C8E8 /* Array-ext.swift */,
+				3F7E2E871C101C82003824BF /* Dictonary-ext.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -247,13 +256,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FF2BF6C1C0920DF0066C8E8 /* Routeable.swift in Sources */,
+				3F7E2E8C1C1026C2003824BF /* URIRouteable.swift in Sources */,
 				3FF2BF711C09216A0066C8E8 /* matching-funcs.swift in Sources */,
 				3FF2BF6A1C0920BF0066C8E8 /* String-ext.swift in Sources */,
 				3FF2BF6F1C09210E0066C8E8 /* PathRouteable.swift in Sources */,
+				3F7E2E8A1C102544003824BF /* SchemeRouteable.swift in Sources */,
 				3FF2BF661C0920260066C8E8 /* NSURL-ext.swift in Sources */,
 				3FF2BF751C0925590066C8E8 /* ensure-matching.swift in Sources */,
 				3FF2BF641C091FEB0066C8E8 /* RouterMatch.swift in Sources */,
 				3FF2BF681C0920340066C8E8 /* Array-ext.swift in Sources */,
+				3F7E2E881C101C82003824BF /* Dictonary-ext.swift in Sources */,
 				3FF2BF771C0927930066C8E8 /* RouteSet.swift in Sources */,
 				3FF2BF731C09251C0066C8E8 /* HostRouteable.swift in Sources */,
 			);

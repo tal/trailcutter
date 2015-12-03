@@ -12,18 +12,49 @@ public protocol PathRouteable: Routeable {
     static var path: String { get }
 }
 
+private let pathDataString = "path_data"
+
+public extension RouterMatch {
+    var pathParams: [String: String]? {
+        return _propertyStore[pathDataString] as? [String: String]
+    }
+}
+
+public extension PathRouteable {
+    public static func pathFromParams(params: [String: String]) -> String {
+        var mutableParams = params
+        var mutablePath = path
+        
+        for (key, value) in params {
+            let replace = ":\(key)"
+            
+            if mutablePath.containsString(replace) {
+                mutablePath = mutablePath.stringByReplacingOccurrencesOfString(replace, withString: value)
+                mutableParams.removeValueForKey(key)
+            }
+        }
+        
+        if mutableParams.count > 0 {
+            mutablePath += "?\(mutableParams.toQueryString())"
+        }
+        
+        return mutablePath
+    }
+}
+
 func matchPathRouteable(Route: Routeable.Type)(_ match: RouterMatch?) -> RouterMatch? {
     guard var match = match else { return nil }
     
     if let PathRoute = Route as? PathRouteable.Type {
+
         if let path = match.url.path {
-            match.pathMatch = matchRouteToString(route: PathRoute.path, path: path)
+            match._propertyStore[pathDataString] = matchRouteToString(route: PathRoute.path, path: path)
         }
         
-        if match.pathMatch == nil {
+        if match._propertyStore[pathDataString] == nil {
             return nil
         } else {
-            match.wasMatched = true
+            match._wasMatched = true
         }
     }
     

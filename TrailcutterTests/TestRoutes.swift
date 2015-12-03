@@ -12,8 +12,10 @@ struct SearchRoute: PathRouteable, HostRouteable {
     static let host = "*.mysite.net"
     static let path = "/search/:term"
     
-    init(routerMatch:RouterMatch) {
-        
+    let match: RouterMatch
+    
+    init(routerMatch: RouterMatch) {
+        match = routerMatch
     }
 }
 
@@ -21,7 +23,20 @@ struct NoMatch: Routeable {
     static let host = "*.mysite.net"
     static let path = "/no-match"
     
-    init(routerMatch:RouterMatch) {
-        
+    let match: RouterMatch
+    
+    init(routerMatch: RouterMatch) {
+        match = routerMatch
+    }
+}
+
+
+struct PostRoute: URIRouteable {
+    static let uri = "https://*.mysite.com/post/:id"
+    
+    let match: RouterMatch
+    
+    init(routerMatch: RouterMatch) {
+        match = routerMatch
     }
 }

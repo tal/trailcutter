@@ -18,7 +18,7 @@ private func isSuffix(host: String) -> Bool {
 
 private func hostMatchesSuffix(suffix: String, host: String) -> Bool {
     let suffixWithoutAsterix = suffix.substringFromIndex(1)
-    
+
     return host.hasSuffix(suffixWithoutAsterix)
 }
 
@@ -31,12 +31,12 @@ func matchHostRouteable(Route: Routeable.Type)(_ match: RouterMatch?) -> RouterM
         
         if isSuffix(HostRoute.host) {
             if hostMatchesSuffix(HostRoute.host, host: urlHost) {
-                match.wasMatched = true
+                match._wasMatched = true
             } else {
                 return nil
             }
         } else if HostRoute.host == urlHost {
-            match.wasMatched = true
+            match._wasMatched = true
         } else {
             return nil
         }

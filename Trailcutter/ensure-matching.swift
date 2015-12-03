@@ -11,5 +11,5 @@ import Foundation
 func matchWasMatched(Route: Routeable.Type)(_ match: RouterMatch?) -> RouterMatch? {
     guard let match = match else { return nil }
     
-    return match.wasMatched ? match : nil
+    return match._wasMatched ? match : nil
 }

@@ -28,7 +28,7 @@ struct RouteTestExample {
         return routeSet.match(url)
     }
     
-    var doesMatch: Bool {
+    func runTest() -> Bool {
         return sucessCheck(matchResult)
     }
 

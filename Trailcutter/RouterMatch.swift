@@ -10,18 +10,16 @@ import Foundation
 
 public struct RouterMatch {
     let url: NSURL
-    var pathMatch:[String: String]? = nil
-    var wasMatched = false
     
-    subscript (key: String) -> String? {
-        if let val = pathMatch?[key] {
-            return val
-        }
-        
-        if let val = url.queryDict?[key] {
-            return val
-        }
-        
-        return nil
+    public var _propertyStore = [String: AnyObject?]()
+    
+    public var _wasMatched = false
+    
+    public var queryParams: [String: String]? {
+        return url.queryDict
+    }
+    
+    init(url: NSURL) {
+        self.url = url
     }
 }
