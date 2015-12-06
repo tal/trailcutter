@@ -85,8 +85,63 @@ This allows you to make a generically useable routes. For instance making a
 protocol which enforces the return of a view controller that's blindly pushed
 onto the stack when matched.
 
+Optionally you could even apply the protocols directly to the view controller
+you want and just do `if let vc = route as? UIViewController { push route }`.
+I wouldn't recommend this as it violates separation of concerns, but it's possible.
+
+### All `Routeable`s
+
+- [`PathRouteable`](https://github.com/tal/trailcutter/blob/master/Trailcutter/PathRouteable.swift)
+Allows routing based on path. Path fragments can be extracted as parameters
+- [`HostRouteable`](https://github.com/tal/trailcutter/blob/master/Trailcutter/HostRouteable.swift)
+Allows routing based on host or wildcards for hosts. You can preifix any
+host with `*` to allow suffix matching.
+-  [`SchemeRouteable`](https://github.com/tal/trailcutter/blob/master/Trailcutter/SchemeRouteable.swift)
+Matches based on scheme. This can be for either custom schemes based on your app
+name, or `http`/`https`
+-  [`URIRouteable`](https://github.com/tal/trailcutter/blob/master/Trailcutter/URIRouteable.swift)
+This matches based on the full URI. Is an amalgamation of all of them. Splits the
+uri into its segments and then matches each independently.
+
+### Reverse routing
+
+Path and URI routes can create routes based on parameters in the reverse fashion
+to actual routing. For the given routes:
+
+```swift
+struct SearchRoute: PathRouteable {
+    static let path = "/search/:term"
+    let term: String?
+
+    init(routerMatch:RouterMatch) {
+        term = routerMatch["term"]
+    }
+}
+
+struct PostRoute: PathRouteable {
+    static let uri = "https://*.mysite.com/post/:id"
+    let id: String?
+
+    init(routerMatch:RouterMatch) {
+        id = routerMatch["id"]
+    }
+}
+```
+
+you can do the following to generate string representations:
+
+```swift
+let surgePath: String = SearchRoute.pathFromParams(["term": "surge", "sort": "score desc"])
+surgePath //=> "/search/surge?sort=score%20desc"
+
+let postURI: String = PostRoute.uriFromParams(["id": "1234"], overrideHost: "subdomain.mysite.com")
+postURI //=> "https://subdomain.mysite.com/post/1234"
+```
+
 ## TODO
 
 - [ ] Make `RouterMatch` and `RouteSet` easier to extend with new matching rules
 - [ ] Remove dependency on `NSURL` for future potential server side use
 - [ ] Allow optional path segments
+- [ ] Allow optional characters or segments in schemes (`http` vs `https`)
+- [ ] Test URI matching performance and see if improvement is needed
